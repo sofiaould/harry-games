@@ -1,14 +1,16 @@
 const vilains = [
-    'images/bellatrix.jpg',
-    'images/Detracqueur.jpg',
-    'images/lucius.jpg',
-    '(images/nagini-serpent.jpg',
-    'images/voldemort.jpg',
-    'images/quirell.jpg'
+    'bellatrix',
+    'Detracqueur',
+    'lucius',
+    'nagini-serpent',
+    'voldemort',
+    'quirell'
   ];
+  //console.log (vilains.length)
 function randomVillains(vilains){
     let randomNumber = Math.floor(Math.random()* vilains.length) // mechant aleatoire
-return randomVillains[randomNumber]
+console.log ('reussie', randomNumber)
+    return vilains[randomNumber]
 }
 
 class Vilains {
@@ -22,7 +24,7 @@ class Vilains {
            this.name = name
            this.width= 150
            this.height= this.width/ ratio
-           this.x = W
+           this.x = 150
            this.y = 150
         }
         img.src = `./images/${name}.jpg` // faire apparaitre img 
