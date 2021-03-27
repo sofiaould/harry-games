@@ -8,8 +8,6 @@ const ctx = document.querySelector("canvas").getContext("2d");
 const W = ctx.canvas.width;
 const H = ctx.canvas.height;
 
-
-
 function draw() {
   ctx.clearRect(0, 0, W, H);
   //
@@ -66,6 +64,11 @@ function animLoop() {
     requestAnimationFrame(animLoop);
   }
 }
+document.addEventListener("keyup", (e) => {
+  //ralentir harry
+  harry.speedX = 0;
+  harry.speedY = 0;
+});
 function startGame() {
   if (raf) {
     cancelAnimationFrame(raf);
@@ -89,7 +92,7 @@ function checkGameOver() {
   });
 
   if (crashed) {
-    //stopGame();
+    stopGame();
     console.log("crashed");
   }
 }

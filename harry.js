@@ -2,7 +2,7 @@
 
 class Component extends Base {
   constructor(width, height, picString, x, y) {
-    super()
+    super();
     const img = document.createElement("img"); // <img>
     this.img = img; // tableau images mechants
     this.img.onload = () => {
@@ -27,3 +27,4 @@ class Component extends Base {
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
 }
+
