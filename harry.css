@@ -1,4 +1,9 @@
-body{
-   
-    
+/** @format */
+body {
+  margin: 0;
+}
+
+.canvas {
+  position: absolute;
+  border: solid black 25px;
 }

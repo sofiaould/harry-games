@@ -2,8 +2,9 @@
 
 let harry;
 let mechants = [];
-let gameover;
+let gameover = false;
 let points;
+let score = 0;
 const ctx = document.querySelector("canvas").getContext("2d");
 const W = ctx.canvas.width;
 const H = ctx.canvas.height;
@@ -15,6 +16,7 @@ function draw() {
   //
   harry.draw();
   harry.newPos();
+  //draw.score();
   //
   // Draw Vilains
   //
@@ -80,19 +82,27 @@ function startGame() {
   console.log("reussi");
 }
 startGame();
-/*for (el of mechants) {
-    if (el.hits(harry)) {
-      console.log('crashed');
-      gameover = true;
-    }
-  }};*/
 function checkGameOver() {
   const crashed = mechants.some(function (vilain) {
     return harry.crashWith(vilain);
+    score++
   });
 
   if (crashed) {
+    gameover = true;
     stopGame();
     console.log("crashed");
   }
+}
+function drawScore() {
+let points = Math.floor(this.frames / 5)
+this.ctx.font = "18px serif";
+this.ctx.fillStyle = "black";
+this.ctx.fillText(`Score: ${points}` +score, 350, 50);
+}
+drawScore();
+
+function stopGame() {
+  return clearInterval(this.interval);
+  console.log ('you made it')
 }
