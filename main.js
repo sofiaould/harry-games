@@ -52,6 +52,11 @@ document.onkeydown = function (e) {
       break;
   }
 };
+document.addEventListener("keyup", (e) => {
+  harry.speedX = 0;
+  harry.speedY = 0;
+});
+
 let raf;
 let frames = 0;
 function animLoop() {
@@ -66,11 +71,7 @@ function animLoop() {
     requestAnimationFrame(animLoop);
   }
 }
-document.addEventListener("keyup", (e) => {
-  //ralentir harry
-  harry.speedX = 0;
-  harry.speedY = 0;
-});
+
 function startGame() {
   if (raf) {
     cancelAnimationFrame(raf);
@@ -85,7 +86,7 @@ startGame();
 function checkGameOver() {
   const crashed = mechants.some(function (vilain) {
     return harry.crashWith(vilain);
-    score++
+    score++;
   });
 
   if (crashed) {
@@ -94,15 +95,15 @@ function checkGameOver() {
     console.log("crashed");
   }
 }
-function drawScore() {
-let points = Math.floor(this.frames / 5)
-this.ctx.font = "18px serif";
-this.ctx.fillStyle = "black";
-this.ctx.fillText(`Score: ${points}` +score, 350, 50);
+/*function drawScore() {
+  let points = Math.floor(this.frames / 5);
+  this.ctx.font = "18px serif";
+  this.ctx.fillStyle = "black";
+  this.ctx.fillText(`Score: ${points}` + score, 350, 50);
 }
 drawScore();
 
 function stopGame() {
   return clearInterval(this.interval);
-  console.log ('you made it')
-}
+  console.log("you made it");
+}*/

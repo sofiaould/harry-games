@@ -1,9 +1,15 @@
 /** @format */
 body {
   margin: 0;
+  background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
+  background-size: cover;
 }
 
-.canvas {
+#canvas {
   position: absolute;
-  border: solid black 25px;
+  left: 20%;
+  right: 20%;
+  border: none;
+  background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
+  background-size: 1000px 800px;
 }
