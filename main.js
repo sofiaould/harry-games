@@ -15,7 +15,7 @@ function draw() {
   // Draw Harry
   //
   harry.draw();
-  harry.newPos();
+
   //draw.score();
   //
   // Draw Vilains
@@ -26,12 +26,12 @@ function draw() {
     mechants.push(vilain);
   }
   mechants.forEach((el) => {
-    el.y += 5;
+    el.y += 1;
     el.draw();
   });
 
   for (var i = 0; i < mechants.length; i++) {
-    mechants[i].x -= 5;
+    mechants[i].x -= 6;
   }
 }
 
@@ -39,24 +39,20 @@ document.onkeydown = function (e) {
   if (!harry) return;
   switch (e.keyCode) {
     case 38: // up arrow
-      harry.speedY -= 1;
+      harry.moveUp();
+
       break;
     case 40: // down arrow
-      harry.speedY += 1;
+      harry.moveDown();
       break;
     case 37: // left arrow
-      harry.speedX -= 1;
+      harry.moveLeft();
       break;
     case 39: // right arrow
-      harry.speedX += 1;
+      harry.moveRight();
       break;
   }
 };
-document.addEventListener("keyup", (e) => {
-  harry.speedX = 0;
-  harry.speedY = 0;
-});
-
 let raf;
 let frames = 0;
 function animLoop() {
@@ -71,16 +67,20 @@ function animLoop() {
     requestAnimationFrame(animLoop);
   }
 }
-
+/*document.addEventListener("keyup", (e) => {
+  //ralentir harry
+  harry.speedX = 0;
+  harry.speedY = 0;
+});*/
 function startGame() {
   if (raf) {
     cancelAnimationFrame(raf);
   }
   //
-  harry = new Component(180, 180, "images/harrypotter.jpg", 0, 110);
+  harry = new Component(180, 180, "./images/harry.png", 0, 110);
   //obstacles = [];
   requestAnimationFrame(animLoop);
-  console.log("reussi");
+  //console.log("reussi");
 }
 startGame();
 function checkGameOver() {
@@ -97,13 +97,13 @@ function checkGameOver() {
 }
 /*function drawScore() {
   let points = Math.floor(this.frames / 5);
-  this.ctx.font = "18px serif";
-  this.ctx.fillStyle = "black";
-  this.ctx.fillText(`Score: ${points}` + score, 350, 50);
+  ctx.font = "18px serif";
+  ctx.fillStyle = "black";
+  .ctx.fillText(`Score: ${points}` + score, 350, 50);
 }
 drawScore();
-
+*/
 function stopGame() {
   return clearInterval(this.interval);
   console.log("you made it");
-}*/
+}

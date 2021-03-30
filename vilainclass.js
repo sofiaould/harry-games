@@ -5,13 +5,7 @@ function randomPosition(from, to) {
   return Math.floor(from + Math.random() * (to - from));
 }
 // to random vilains type
-const vilainsType = [
-  "bellatrix",
-  "Detraqueur",
-  "lucius",
-  "nagini-serpent",
-  "voldemort",
-];
+const vilainsType = ["bellatrix", "detracteur", "lucius", "snake", "voldemort"];
 function randomVil(vilains) {
   const randNum = Math.floor(Math.random() * Math.floor(vilainsType.length)); // 2
   return vilainsType[randNum];
@@ -31,7 +25,7 @@ class Vilains extends Base {
       this.x = W;
       this.y = randomPosition(50, 600);
     };
-    img.src = `images/${name}.jpg`; // faire apparaitre img
+    img.src = `images/${name}.png`; // faire apparaitre img
   }
   draw() {
     if (!this.img) return;
