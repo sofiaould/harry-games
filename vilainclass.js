@@ -20,7 +20,7 @@ class Vilains extends Base {
       this.img = img;
       const ratio = img.naturalWidth / img.naturalHeight;
       this.name = name;
-      this.width = 150;
+      this.width = 80;
       this.height = this.width / ratio;
       this.x = W;
       this.y = randomPosition(50, 600);

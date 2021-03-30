@@ -4,10 +4,12 @@ let harry;
 let mechants = [];
 let gameover = false;
 let points;
-let score = 0;
 const ctx = document.querySelector("canvas").getContext("2d");
 const W = ctx.canvas.width;
 const H = ctx.canvas.height;
+/*var myAudio = document.createElement("audio");
+myAudio.src = "HarryPottermusic.mp3";
+myAudio.play();*/
 
 function draw() {
   ctx.clearRect(0, 0, W, H);
@@ -33,6 +35,18 @@ function draw() {
   for (var i = 0; i < mechants.length; i++) {
     mechants[i].x -= 6;
   }
+
+  //
+  for (vilain of mechants) {
+    if (harry.getPoints(vilain)) {
+      console.log(points);
+    }
+  }
+
+  //Points
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText(`Score: ${points}`, W - 100, 50);
 }
 
 document.onkeydown = function (e) {
@@ -77,8 +91,9 @@ function startGame() {
     cancelAnimationFrame(raf);
   }
   //
-  harry = new Component(180, 180, "./images/harry.png", 0, 110);
+  harry = new Component(50, 100, "./images/harry.png", 0, 110);
   //obstacles = [];
+  points = 0;
   requestAnimationFrame(animLoop);
   //console.log("reussi");
 }
@@ -86,7 +101,6 @@ startGame();
 function checkGameOver() {
   const crashed = mechants.some(function (vilain) {
     return harry.crashWith(vilain);
-    score++;
   });
 
   if (crashed) {
@@ -99,10 +113,12 @@ function checkGameOver() {
   let points = Math.floor(this.frames / 5);
   ctx.font = "18px serif";
   ctx.fillStyle = "black";
-  .ctx.fillText(`Score: ${points}` + score, 350, 50);
+  ctx.fillText(`Score: ${points}` + score, 350, 50);
+  console.log ('score')
 }
 drawScore();
 */
+
 function stopGame() {
   return clearInterval(this.interval);
   console.log("you made it");
