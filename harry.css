@@ -1,15 +1,26 @@
 /** @format */
 body {
   margin: 0;
-  /* background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
-  background-size: cover;*/
+  background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
+  background-size: cover;
 }
 
 #canvas {
   position: absolute;
   left: 16%;
-  border: solid black;
-  /*background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
-  background-size: 1000px 800px;
-  box-shadow: 8px 8px 8px black;*/
+  top: 18%;
+  /*border: solid whitesmoke;*/
+  /*background-color: black;
+  box-shadow: 8px 8px 5px 8px #036f7b;*/
+  border-radius: 161px;
+  background: black;
+  box-shadow: inset 5px 5px 13px #293133, inset -5px -5px 13px #036f7b;
+}
+
+img {
+  width: 30vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 2vh;
 }

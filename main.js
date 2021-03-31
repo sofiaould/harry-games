@@ -17,9 +17,7 @@ function draw() {
   // Draw Harry
   //
   harry.draw();
-
-  //draw.score();
-  //
+  //draw score
   // Draw Vilains
   //
   if (frames % 150 === 0) {
@@ -44,9 +42,9 @@ function draw() {
   }
 
   //Points
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText(`Score: ${points}`, W - 100, 50);
+  ctx.font = "16px arial";
+  ctx.fillStyle = "#DFAF2C";
+  ctx.fillText(`Score: ${points}`, W - 130, 50);
 }
 
 document.onkeydown = function (e) {
@@ -91,7 +89,7 @@ function startGame() {
     cancelAnimationFrame(raf);
   }
   //
-  harry = new Component(50, 100, "./images/harry.png", 0, 110);
+  harry = new Component(50, 100, "./images/harry.png", 20, 200);
   //obstacles = [];
   points = 0;
   requestAnimationFrame(animLoop);
