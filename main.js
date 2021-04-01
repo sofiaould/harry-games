@@ -103,21 +103,17 @@ function checkGameOver() {
 
   if (crashed) {
     gameover = true;
-    stopGame();
-    console.log("crashed");
+    let endOfTheGame = setTimeout(startGame(), 1000);
+    clearTimeout(endOfTheGame);
+    //stopGame();
   }
 }
-/*function drawScore() {
-  let points = Math.floor(this.frames / 5);
-  ctx.font = "18px serif";
-  ctx.fillStyle = "black";
-  ctx.fillText(`Score: ${points}` + score, 350, 50);
-  console.log ('score')
-}
-drawScore();
-*/
 
-function stopGame() {
-  return clearInterval(this.interval);
-  console.log("you made it");
-}
+/*function stopGame() {
+  //return clearInterval(this.interval);
+  //console.log("you made it");
+  let endOfTheGame = setTimeout(startGame(), 1000);
+  if (crashed) {
+    clearTimeout(endOfTheGame);
+  }
+}*/
