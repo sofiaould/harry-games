@@ -2,6 +2,7 @@
 body {
   margin: 0;
   background-image: url("./images/battle.jpg");
+  /*background-repeat: no-repeat;*/
   background-size: cover;
 }
 
@@ -15,7 +16,8 @@ body {
 }
 
 img {
-  width: 30vh;
+  position: fixed;
+  width: 25vh;
   display: flex;
   justify-content: center;
   margin-left: 40%;
@@ -28,11 +30,38 @@ img {
   position: absolute;
   top: 50%;
   margin-left: 40%;
-  color: white;
   width: 80%;
   height: 80%;
   font-weight: bolder;
+  
 }
 h1 {
   font-size: 50px;
+  color: white;
+}
+
+button {
+  position: absolute;
+  top: 86vh;
+  width: 15%;
+  height: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  box-shadow: inset 5px 5px 13px black, inset -5px -5px 13px #036f7b;
+}
+
+#start-button {
+  display: flex;
+  justify-content: center
+  color: white;
+  background-color: black;
+  border-radius: 36px;
+  box-shadow: inset 5px 5px 13px black, inset -5px -5px 13px #036f7b;
+  top:20%;
+  margin-left: 5vh;
+  text-align:justify;
+  
 }

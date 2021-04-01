@@ -8,9 +8,6 @@ const W = ctx.canvas.width;
 const H = ctx.canvas.height;
 let endOfTheGame = document.querySelector("#gameOver");
 let buttonStart = document.querySelector("button");
-/*var myAudio = document.createElement("audio");
-myAudio.src = "./audio/HarryPottermusic.mp3";
-myAudio.play();*/
 var audio = document.querySelector("#audio");
 function draw() {
   ctx.clearRect(0, 0, W, H);
