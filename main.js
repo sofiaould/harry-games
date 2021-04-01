@@ -7,7 +7,7 @@ const ctx = document.querySelector("canvas").getContext("2d");
 const W = ctx.canvas.width;
 const H = ctx.canvas.height;
 let endOfTheGame = document.querySelector("#gameOver");
-//let buttonStart = document.querySelector("button");
+let buttonStart = document.querySelector("button");
 /*var myAudio = document.createElement("audio");
 myAudio.src = "./audio/HarryPottermusic.mp3";
 myAudio.play();*/
@@ -94,16 +94,16 @@ function startGame() {
   requestAnimationFrame(animLoop);
   //console.log("reussi");
 }
-startGame();
+//startGame();
 function checkGameOver() {
   const crashed = mechants.some(function (vilain) {
     return harry.crashWith(vilain);
   });
   if (crashed) {
     gameover = true;
-    // document.getElementById("start").style.display = "none";
+    document.getElementById("start").style.display = "none";
   }
 }
-//document.getElementById("start").onclick = function () {
-//startGame();
-//};
+document.getElementById("start").onclick = function () {
+  startGame();
+};
