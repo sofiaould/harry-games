@@ -9,17 +9,18 @@
 	</head>
 	<body>
 		<div id="game-board">
-			<canvas id="canvas" width="900" height="600" ></canvas>
-			<img src="images/logo.jpg"/>
+			<!--<button id = "start">Start</button>-->
+			<canvas id="canvas" width="900" height="600"></canvas>
+			<audio src= "audio/HarryPottermusic.mp3" id = "audio" autoplay = "true"></audio>
+			<img src="images/logo.jpg" />
 		</div>
-		<div id = "gameOver" >
-			<H1>Game Over</H1>
-			<button>Try Again </button>
-		</div> 
+		<div id="gameOver" class="over">
+			<h1>Game Over!</h1>
+			<button id="start-button">StartGame</button>
+		</div>
 		<script src="base.js"></script>
 		<script src="vilainclass.js"></script>
 		<script src="harry.js"></script>
-		  
 		<script src="main.js"></script>
 	</body>
 </html>

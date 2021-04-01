@@ -1,7 +1,7 @@
 /** @format */
 body {
   margin: 0;
-  background-image: url("/images/battle.jpg");
+  background-image: url("./images/battle.jpg");
   background-size: cover;
 }
 
@@ -9,9 +9,6 @@ body {
   position: absolute;
   left: 16%;
   top: 18%;
-  /*border: solid whitesmoke;*/
-  /*background-color: black;
-  box-shadow: 8px 8px 5px 8px #036f7b;*/
   border-radius: 161px;
   background: black;
   box-shadow: inset 5px 5px 13px #293133, inset -5px -5px 13px #036f7b;
@@ -24,6 +21,18 @@ img {
   margin-left: 40%;
   margin-top: 2vh;
 }
-
-#GameOver {
+.over {
+  display: none;
+}
+#gameOver {
+  position: absolute;
+  top: 50%;
+  margin-left: 40%;
+  color: white;
+  width: 80%;
+  height: 80%;
+  font-weight: bolder;
+}
+h1 {
+  font-size: 50px;
 }
