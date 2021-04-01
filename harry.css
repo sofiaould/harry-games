@@ -1,7 +1,7 @@
 /** @format */
 body {
   margin: 0;
-  background-image: url("/Users/sofiaould-abderrahmane/video Game/images/battle.jpg");
+  background-image: url("/images/battle.jpg");
   background-size: cover;
 }
 
@@ -25,6 +25,5 @@ img {
   margin-top: 2vh;
 }
 
-#GameOver{
-  
+#GameOver {
 }
