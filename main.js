@@ -7,6 +7,8 @@ let points;
 const ctx = document.querySelector("canvas").getContext("2d");
 const W = ctx.canvas.width;
 const H = ctx.canvas.height;
+var endOfTheGame = document.querySelector("gameOver");
+console.log(endOfTheGame);
 /*var myAudio = document.createElement("audio");
 myAudio.src = "HarryPottermusic.mp3";
 myAudio.play();*/
@@ -77,14 +79,13 @@ function animLoop() {
 
   if (!gameover) {
     requestAnimationFrame(animLoop);
-  }
+  } /* else {
+    restartGame();
+  }*/
 }
-/*document.addEventListener("keyup", (e) => {
-  //ralentir harry
-  harry.speedX = 0;
-  harry.speedY = 0;
-});*/
 function startGame() {
+  // endOfTheGame.style.display = "none";
+
   if (raf) {
     cancelAnimationFrame(raf);
   }
@@ -103,12 +104,23 @@ function checkGameOver() {
 
   if (crashed) {
     gameover = true;
-    let endOfTheGame = setTimeout(startGame(), 1000);
-    clearTimeout(endOfTheGame);
+    //endOfTheGame.style.display = "block";
+    //let endOfTheGame = setTimeout(startGame(), 1000);
+    //clearTimeout(endOfTheGame);
     //stopGame();
+    /*document.createElement("canvas").getContext("2d");
+    context.font = "16px arial";
+    context.fillStyle = "#FFFFF";
+    context.fillText(`Game Over`, W - 130, 50);*/
   }
 }
-
+/*function restartGame() {
+  let harry = 0;
+  frames = 0;
+  let mechants = [];
+  let gameover = false;
+  startGame();
+}*/
 /*function stopGame() {
   //return clearInterval(this.interval);
   //console.log("you made it");
