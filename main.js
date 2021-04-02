@@ -37,7 +37,7 @@ function draw() {
     }
   }
   //Points
-  ctx.font = "16px arial";
+  ctx.font = "16px 'Londrina Solid', cursive";
   ctx.fillStyle = "#DFAF2C";
   ctx.fillText(`Score: ${points}`, W - 130, 50);
 }
