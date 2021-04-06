@@ -22,19 +22,19 @@ class Component extends Base {
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
   moveLeft() {
-    this.x -= 10; // controle la vitesse de harry
+    this.x -= 12; // controle la vitesse de harry
     console.log("move left");
   }
   moveRight() {
-    this.x += 10;
+    this.x += 12;
     console.log("move right");
   }
   moveUp() {
-    this.y -= 10;
+    this.y -= 12;
     console.log("move up");
   }
   moveDown() {
-    this.y += 10;
+    this.y += 12;
     console.log("move down");
   }
 }

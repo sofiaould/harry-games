@@ -28,7 +28,7 @@ function draw() {
     el.draw();
   });
   for (var i = 0; i < mechants.length; i++) {
-    mechants[i].x -= 6;
+    mechants[i].x -= 7;
   }
   //
   for (vilain of mechants) {

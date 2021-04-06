@@ -20,9 +20,7 @@ class Base {
       this.right() > mechants.left() &&
       this.left() < mechants.right()
     );
-    /* alert("Game Over");
-    document.location.reload(); // pour remettre le jeu a zero
-    //clear (requestAnimationFrame)*/
+   
   }
   getPoints(mechants) {
     if (

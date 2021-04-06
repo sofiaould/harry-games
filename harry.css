@@ -4,8 +4,8 @@ body {
 
   margin: 0;
   background-image: url("./images/battle.jpg");
-  /*background-repeat: no-repeat;*/
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 105%;
 }
 
 #canvas {
