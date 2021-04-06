@@ -25,7 +25,7 @@ class Vilains extends Base {
       this.x = W;
       this.y = randomPosition(50, 600);
     };
-    img.src = `images/${name}.png`; // faire apparaitre img
+    img.src = `images/${name}.png`; // faire apparaitre img sans url /juste avec le nom
   }
   draw() {
     if (!this.img) return;
