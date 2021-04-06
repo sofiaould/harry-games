@@ -1,11 +1,12 @@
 /** @format */
 body {
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap");
 
   margin: 0;
   background-image: url("./images/battle.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
 
 #canvas {
@@ -13,7 +14,7 @@ body {
   left: 16%;
   top: 18%;
   border-radius: 161px;
-  background:black;
+  background: black;
   box-shadow: inset 5px 5px 13px #293133, inset -5px -5px 13px #036f7b;
 }
 
@@ -35,12 +36,11 @@ img {
   width: 80%;
   height: 80%;
   font-weight: bolder;
-  
 }
 h1 {
   font-size: 50px;
-  color: #DFAF2C;
-  font-family: 'Londrina Solid', cursive;
+  color: #dfaf2c;
+  font-family: "Londrina Solid", cursive;
 }
 
 button {
@@ -50,31 +50,31 @@ button {
   height: 10%;
   font-size: 20px;
   font-weight: bold;
-  color:#DFAF2C;
+  color: #dfaf2c;
   background-color: black;
   border-radius: 50px;
   box-shadow: inset 5px 5px 13px black, inset -5px -5px 13px #036f7b;
   text-align: center;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
 
 #start-button {
   display: flex;
-  justify-content: center
+  justify-content: center;
   background-color: black;
   border-radius: 36px;
   box-shadow: inset 5px 5px 13px black, inset -5px -5px 13px #036f7b;
-  top:20%;
+  top: 20%;
   margin-left: 5vh;
-  text-align:center;
-  color:#DFAF2C;
-  font-family:'Londrina Solid', cursive;
+  text-align: center;
+  color: #dfaf2c;
+  font-family: "Londrina Solid", cursive;
 }
-h2{
+h2 {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
   display: flex;
   margin: auto;
-  font-family: 'Londrina Solid', cursive;
+  font-family: "Londrina Solid", cursive;
 }
