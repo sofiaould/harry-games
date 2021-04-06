@@ -24,9 +24,9 @@ class Base {
   }
   getPoints(mechants) {
     if (
-      /* this.bottom() === mechants.top() &&
-      this.top() === mechants.bottom() &&
-      this.right() === mechants.left() &&*/
+      // this.bottom() === mechants.top() &&
+      //this.top() === mechants.bottom() &&
+      //this.right() === mechants.left() &&
       this.left() === mechants.right()
       //this.x === mechants.x
     ) {
