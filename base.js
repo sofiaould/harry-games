@@ -20,18 +20,17 @@ class Base {
       this.right() > mechants.left() &&
       this.left() < mechants.right()
     );
-   
   }
-  getPoints(mechants) {
-    if (
-      // this.bottom() === mechants.top() &&
-      //this.top() === mechants.bottom() &&
-      //this.right() === mechants.left() &&
-      this.left() === mechants.right()
-      //this.x === mechants.x
-    ) {
-      console.log("harry a dépassé le vilain");
-      return points++;
-    }
-  }
+  // getPoints(mechants) {
+  //   if (
+  //     // this.bottom() === mechants.top() &&
+  //     //this.top() === mechants.bottom() &&
+  //     //this.right() === mechants.left() &&
+  //     //this.left() === mechants.right()
+  //     //this.x === mechants.x
+  //   ) {
+  //     console.log("harry a dépassé le vilain");
+  //     return points++;
+  //   }
+  // }
 }

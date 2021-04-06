@@ -23,18 +23,18 @@ class Component extends Base {
   }
   moveLeft() {
     this.x -= 12; // controle la vitesse de harry
-    console.log("move left");
+   // console.log("move left");
   }
   moveRight() {
     this.x += 12;
-    console.log("move right");
+    //console.log("move right");
   }
   moveUp() {
     this.y -= 12;
-    console.log("move up");
+    //console.log("move up");
   }
   moveDown() {
     this.y += 12;
-    console.log("move down");
+    //console.log("move down");
   }
 }

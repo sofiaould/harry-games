@@ -15,7 +15,7 @@ class Vilains extends Base {
     super();
     const img = document.createElement("img"); // <img>
     img.onload = () => {
-      console.log("image chargee");
+     // console.log("image chargee");
       // ecrire des console si jamais tu es pas sure que ca marche
       this.img = img;
       const ratio = img.naturalWidth / img.naturalHeight;

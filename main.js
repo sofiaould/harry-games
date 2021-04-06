@@ -32,9 +32,15 @@ function draw() {
   }
   //
   for (vilain of mechants) {
-    if (harry.getPoints(vilain)) {
-      console.log(points);
+    if (vilain.x < 0) {
+      points++;
+      const vilainIndex = mechants.indexOf(vilain);
+      mechants.splice(vilainIndex, 1);
     }
+    //if (harry.getPoints(vilain)) {
+    // console.log(points);
+    //points++;
+    // }
   }
   //Points
   ctx.font = "16px 'Londrina Solid', cursive";
